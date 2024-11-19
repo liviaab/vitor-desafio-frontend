@@ -22,14 +22,47 @@
         <h3>Cidades</h3>
     
         <ul>
-          <li>Belo Horizonte   18ºC 25ºC</li>
-          <li>Contagem   17ºC 30ºC</li>
-          <li>Ribeirão das Neves 19ºC 29ºC</li>
-          <li>Curitiba   13ºC  21ºC</li>
-          <li>Cuiabá   29ºC 39ºC</li>
+          <li id="li-cidade-1"> <span id="cidade-1">Belo Horizonte </span> <span id="temp-min-1">18ºC</span> <span id="temp-min-1">25ºC</span></li>
+          <li id="li-cidade-2"> <span id="cidade-2">Contagem   </span> <span id="temp-min-2">17ºC</span> <span id="temp-min-2">30ºC</span> </li>
+          <li id="li-cidade-3"> <span id="cidade-3">Ribeirão das Neves </span> <span id="temp-min-3">19ºC</span> <span id="temp-min-3">29ºC</span></li>
+          <li id="li-cidade-4"> <span id="cidade-4">Curitiba </span> <span id="temp-min-4"> 13ºC</span> <span id="temp-min-4">21ºC</span></li>
+          <li id="li-cidade-5"> <span id="cidade-5">Cuiabá  </span> <span id="temp-min-5">29ºC</span> <span id="temp-min-5">39ºC</span> </li>
         </ul>
       </div>
     </section>
+
+    <section>
+      <div class="cardDeTemperatura">
+        <strong>BH</strong>
+
+        <h2 id="temp-atual">25ºC</h2> 
+
+        <p id="temp-minima">Mínima: 10ºC</p>
+        <p id="temp-maxima">Máxima: 30ºC</p>
+        <p>Probabilidade de Chuva: 60%</p>        
+      </div>
+    </section>
   </div>
+
+
+  <script>
+    document.getElementById("li-cidade-1").addEventListener("click", showCard, false);
+    document.getElementById("li-cidade-2").addEventListener("click", showCard, false);
+    document.getElementById("li-cidade-3").addEventListener("click", showCard, false);
+    document.getElementById("li-cidade-4").addEventListener("click", showCard, false);
+    document.getElementById("li-cidade-5").addEventListener("click", showCard, false);
+
+    function showCard( event ) {
+      minima = Math.floor(Math.random() * 10) + 1
+      maxima = Math.floor(Math.random() * 10) + 1
+      atual = Math.floor(Math.random() * 10) + 1
+      // suponha que a gente ta recebendo esses valores do evento
+
+      document.getElementsByClassName("cardDeTemperatura")[0].style.display = 'block'
+      document.getElementById("temp-atual").innerHTML = atual
+      document.getElementById("temp-minima").innerHTML = minima
+      document.getElementById("temp-maxima").innerHTML = maxima
+    }
+  </script>
 </body>
 </html>

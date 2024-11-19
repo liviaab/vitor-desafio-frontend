@@ -40,3 +40,10 @@ ul {
   width: 20px;
   height: 20px;
 }
+
+.cardDeTemperatura  {
+  background-color: beige;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
